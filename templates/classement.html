@@ -8,44 +8,59 @@
 <body>
     <header>
         <div class="container">
-            <h1>{{ atu.nom }} [{{ atu.tag }}]</h1>
+            <div class="logo-area">
+                <h1>{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
+            </div>
             <nav>
                 <a href="/">Accueil</a>
-                <a href="/lignes">Réseau & Hubs</a>
-                <a href="/classement">Classement</a>
-                <a href="/gestion-flotte">Trésorerie</a>
+                <a href="/actifs">Actifs</a>
+                <a href="/lignes">Réseau</a>
+                <a href="/carte">Carte & GPS</a>
+                <a href="/classement" class="active">Classement</a>
+                <a href="/factures">Trésorerie</a>
+                <a href="/recrutement">Recrutement</a>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <h2>Tableau d'Honneur de la Flotte</h2>
-        <p>Suivi des performances et de l'implication de nos routiers sur le terrain.</p>
+        <section class="hero" style="padding: 40px 20px;">
+            <h2>Classement des Conducteurs</h2>
+            <p>Le palmarès de nos chauffeurs les plus assidus et performants sur les routes de l'Union.</p>
+        </section>
 
+        {% if classement %}
         <table>
             <thead>
                 <tr>
                     <th>Rang</th>
-                    <th>Conducteur</th>
-                    <th>Missions validées</th>
+                    <th>Chauffeur</th>
+                    <th>Missions</th>
                     <th>Kilomètres parcourus</th>
-                    <th>Statut</th>
                 </tr>
             </thead>
             <tbody>
+                {% for rang, driver in enumerate(classement, 1) %}
                 <tr>
-                    <td>1</td>
-                    <td>Trans_Europe_Rail</td>
-                    <td>42</td>
-                    <td>45 200 km</td>
-                    <td><span class="badge actif">Fondateur / Routier</span></td>
+                    <td><strong>#{{ rang }}</strong></td>
+                    <td>{{ driver.nom }}</td>
+                    <td>{{ driver.missions }}</td>
+                    <td style="color: var(--accent);">{{ driver.km }} km</td>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
+        {% else %}
+        <div class="card" style="text-align: center; padding: 40px;">
+            <p style="color: var(--text-muted);">Le classement s'actualisera dès la synchronisation des premières données de livraison.</p>
+            <br>
+            <a href="/recrutement" class="btn">Rejoindre l'équipe pour grimper au classement</a>
+        </div>
+        {% endif %}
     </main>
 
     <footer>
-        <p>&copy; 2026 {{ atu.nom }} — Créé par {{ atu.auteur }}</p>
+        <p>&copy; 2026 {{ atu.nom }} — Conçu par {{ atu.auteur }}</p>
     </footer>
 </body>
 </html>
