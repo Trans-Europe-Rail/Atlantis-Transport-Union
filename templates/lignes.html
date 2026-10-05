@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>{{ atu.nom }} — Réseau</title>
+    <title>{{ atu.nom }} — Réseau & Lignes</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -13,7 +13,9 @@
             </div>
             <nav>
                 <a href="/">Accueil</a>
+                <a href="/actifs">Actifs</a>
                 <a href="/lignes" class="active">Réseau</a>
+                <a href="/carte">Carte & GPS</a>
                 <a href="/classement">Classement</a>
                 <a href="/factures">Trésorerie</a>
                 <a href="/recrutement">Recrutement</a>
@@ -23,8 +25,8 @@
 
     <main class="container">
         <section class="hero" style="padding: 40px 20px;">
-            <h2>Nos Lignes & Corridors</h2>
-            <p>Découvre l'ensemble des axes officiels parcourus par les chauffeurs de l'Atlantis Transport Union à travers l'Europe.</p>
+            <h2>Nos Axes & Corridors Européens</h2>
+            <p>De Madrid jusqu'à Istanbul, et de notre ligne géante de 5000 km reliant Lisbonne à Narvik, découvre les grands itinéraires officiels de l'ATU.</p>
         </section>
 
         <div class="grid">
