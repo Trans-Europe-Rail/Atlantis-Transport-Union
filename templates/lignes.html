@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>{{ atu.nom }} — Réseau & Lignes</title>
+    <title>{{ atu.nom }} — Réseau & DLCs</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -25,10 +25,53 @@
 
     <main class="container">
         <section class="hero" style="padding: 40px 20px;">
-            <h2>Nos Axes & Corridors Européens</h2>
-            <p>De Madrid jusqu'à Istanbul, et de notre ligne géante de 5000 km reliant Lisbonne à Narvik, découvre les grands itinéraires officiels de l'ATU.</p>
+            <h2>Nos Axes & Prérequis Cartographiques</h2>
+            <p>De Madrid jusqu'à Istanbul, et sur notre ligne géante de 5000 km reliant Lisbonne à Narvik, voici les itinéraires de l'ATU et les extensions obligatoires pour rouler avec nous.</p>
         </section>
 
+        <!-- Liste des DLCs Requis -->
+        <div class="card" style="margin-bottom: 40px; border-color: var(--accent);">
+            <h3 style="color: var(--accent); margin-bottom: 15px;">📦 Liste officielle des DLCs Requis</h3>
+            <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem;">Pour accéder à l'intégralité de nos lignes et participer aux missions de l'entreprise, la possession de ces extensions sur Steam est obligatoire :</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;">
+                <a href="https://store.steampowered.com/app/2780810/Euro_Truck_Simulator_2__Nordic_Horizons/" target="_blank" class="btn secondary" style="text-align: left; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Nordic Horizons</span> <span style="color: var(--accent);">Steam ➔</span>
+                </a>
+                <a href="https://store.steampowered.com/app/2604420/Euro_Truck_Simulator_2__Greece/" target="_blank" class="btn secondary" style="text-align: left; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Greece</span> <span style="color: var(--accent);">Steam ➔</span>
+                </a>
+                <a href="https://store.steampowered.com/app/1209460/Euro_Truck_Simulator_2__Iberia/" target="_blank" class="btn secondary" style="text-align: left; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Iberia</span> <span style="color: var(--accent);">Steam ➔</span>
+                </a>
+                <a href="https://store.steampowered.com/app/1056760/Euro_Truck_Simulator_2__Road_to_the_Black_Sea/" target="_blank" class="btn secondary" style="text-align: left; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Road to the Black Sea</span> <span style="color: var(--accent);">Steam ➔</span>
+                </a>
+                <a href="https://store.steampowered.com/app/925580/Euro_Truck_Simulator_2__Beyond_the_Baltic_Sea/" target="_blank" class="btn secondary" style="text-align: left; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Beyond the Baltic Sea</span> <span style="color: var(--accent);">Steam ➔</span>
+                </a>
+                <a href="https://store.steampowered.com/app/558244/Euro_Truck_Simulator_2__Italia/" target="_blank" class="btn secondary" style="text-align: left; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Italia</span> <span style="color: var(--accent);">Steam ➔</span>
+                </a>
+                <a href="https://store.steampowered.com/app/531130/Euro_Truck_Simulator_2__Vive_la_France/" target="_blank" class="btn secondary" style="text-align: left; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Vive la France !</span> <span style="color: var(--accent);">Steam ➔</span>
+                </a>
+                <a href="https://store.steampowered.com/app/304212/Euro_Truck_Simulator_2__Scandinavia/" target="_blank" class="btn secondary" style="text-align: left; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Scandinavia</span> <span style="color: var(--accent);">Steam ➔</span>
+                </a>
+                <a href="https://store.steampowered.com/app/227310/Euro_Truck_Simulator_2__Going_East/" target="_blank" class="btn secondary" style="text-align: left; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Going East!</span> <span style="color: var(--accent);">Steam ➔</span>
+                </a>
+                <a href="https://store.steampowered.com/app/558245/Euro_Truck_Simulator_2__Special_Transport/" target="_blank" class="btn secondary" style="text-align: left; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Special Transport</span> <span style="color: var(--accent);">Steam ➔</span>
+                </a>
+                <a href="https://store.steampowered.com/app/531131/Euro_Truck_Simulator_2__Heavy_Cargo_Pack/" target="_blank" class="btn secondary" style="text-align: left; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Heavy Cargo Pack</span> <span style="color: var(--accent);">Steam ➔</span>
+                </a>
+            </div>
+        </div>
+
+        <h3 style="margin-bottom: 20px; font-size: 1.5rem;">Nos Lignes Officielles</h3>
         <div class="grid">
             {% for numero, ligne in lignes.items() %}
             <div class="card">
