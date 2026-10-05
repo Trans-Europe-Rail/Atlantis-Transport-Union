@@ -2,52 +2,48 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>{{ atu.nom }} — Réseau Européen</title>
+    <title>{{ atu.nom }} — Réseau</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>{{ atu.nom }} [{{ atu.tag }}]</h1>
+            <div class="logo-area">
+                <h1>{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
+            </div>
             <nav>
                 <a href="/">Accueil</a>
-                <a href="/lignes">Réseau & Hubs</a>
+                <a href="/lignes" class="active">Réseau</a>
                 <a href="/classement">Classement</a>
-                <a href="/gestion-flotte">Trésorerie</a>
+                <a href="/factures">Trésorerie</a>
+                <a href="/recrutement">Recrutement</a>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <h2>Réseau Européen & Hubs Logistiques</h2>
-        <p>L'ATU opère sur l'ensemble des routes d'ETS2. Nos chauffeurs gèrent des milliers de trajets différents à travers l'Europe, appuyés par nos grands hubs stratégiques.</p>
+        <section class="hero" style="padding: 40px 20px;">
+            <h2>Nos Lignes & Corridors</h2>
+            <p>Découvre l'ensemble des axes officiels parcourus par les chauffeurs de l'Atlantis Transport Union à travers l'Europe.</p>
+        </section>
 
-        <h3>📍 Nos Hubs Principaux</h3>
         <div class="grid">
-            {% for hub in hubs %}
+            {% for numero, ligne in lignes.items() %}
             <div class="card">
-                <h3>{{ hub.ville }} ({{ hub.pays }})</h3>
-                <p><strong>Rôle :</strong> {{ hub.type }}</p>
-            </div>
-            {% endfor %}
-        </div>
-
-        <h3 style="margin-top: 40px;">🌟 Exemples de Trajets Phares</h3>
-        <div class="grid">
-            {% for ligne in lignes %}
-            <div class="card">
-                <h3>{{ ligne.depart }} ➔ {{ ligne.arrivee }}</h3>
-                <p><strong>Distance :</strong> ~{{ ligne.km }} km</p>
-                <p><strong>Type :</strong> {{ ligne.type_convoi }}</p>
-                <p>{{ ligne.description }}</p>
-                <span class="badge actif">{{ ligne.statut }}</span>
+                <span style="color: var(--accent); font-weight: 700; font-size: 0.9rem;">{{ numero }} — {{ ligne.type }}</span>
+                <h3 style="margin-top: 5px;">{{ ligne.depart }} ➔ {{ ligne.arrivee }}</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin: 10px 0;">{{ ligne.description }}</p>
+                <div style="background: rgba(56, 189, 248, 0.05); padding: 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                    <strong style="font-size: 0.85rem; color: var(--text-main);">Distance :</strong> <span style="color: var(--accent);">{{ ligne.km }} km</span><br>
+                    <strong style="font-size: 0.85rem; color: var(--text-main);">Étapes :</strong> <span style="color: var(--text-muted); font-size: 0.9rem;">{{ ", ".join(ligne.arrets) }}</span>
+                </div>
             </div>
             {% endfor %}
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 {{ atu.nom }} — Créé par {{ atu.auteur }}</p>
+        <p>&copy; 2026 {{ atu.nom }} — Conçu par {{ atu.auteur }}</p>
     </footer>
 </body>
 </html>
