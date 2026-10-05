@@ -25,20 +25,30 @@
 
     <main class="container">
         <section class="hero" style="padding: 40px 20px;">
-            <h2>Cartographie & Navigation</h2>
-            <p>Outils de repérage et de suivi GPS pour maîtriser nos axes, y compris notre liaison géante de 5000 km entre Lisbonne et Narvik.</p>
+            <h2>Cartographie & Réseau Européen</h2>
+            <p>Visualisation globale de notre territoire d'opération, incluant nos axes majeurs et notre ligne record de 5000 km entre Lisbonne et Narvik.</p>
         </section>
+
+        <!-- Carte interactive du jeu -->
+        <div class="card" style="padding: 16px; margin-bottom: 30px; text-align: center;">
+            <h3 style="margin-bottom: 15px; text-align: left;">🗺️ Carte Interactive du Réseau</h3>
+            <div style="position: relative; width: 100%; height: 550px; background-color: #0f172a; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color);">
+                <!-- Intégration d'une visionneuse de carte web ETS2 (style TruckersMP map ou vue d'ensemble) -->
+                <iframe src="https://trucksimgps.com" style="width: 100%; height: 100%; border: none;" title="Carte ETS2"></iframe>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 10px;">Utilise les contrôles de zoom pour explorer les axes et préparer tes missions en solo ou sous ProMods.</p>
+        </div>
 
         <div class="grid">
             <div class="card">
-                <h3>TruckSim GPS</h3>
-                <p style="color: var(--text-muted); margin: 10px 0 20px 0;">Idéal pour la navigation en temps réel et l'immersion lors de tes livraisons longue distance.</p>
-                <a href="https://trucksimgps.com" target="_blank" class="btn">Ouvrir TruckSim GPS</a>
+                <h3>Outils de Navigation</h3>
+                <p style="color: var(--text-muted); margin: 10px 0 15px 0;">Besoin d'un GPS d'appoint pour suivre ta position en direct sur les routes de l'Union ?</p>
+                <a href="https://trucksimgps.com" target="_blank" class="btn" style="width: 100%;">Ouvrir TruckSim GPS en plein écran</a>
             </div>
             <div class="card">
-                <h3>Carte Live TruckersMP</h3>
-                <p style="color: var(--text-muted); margin: 10px 0 20px 0;">Visualise l'état du trafic et repère les autres chauffeurs de la compagnie en direct.</p>
-                <a href="https://truckersmp.com/map" target="_blank" class="btn secondary">Voir la Map Live</a>
+                <h3>Rappel des Exigences</h3>
+                <p style="color: var(--text-muted); margin: 10px 0 15px 0;">Zéro multijoueur toléré. Toutes les courses s'effectuent en solo strict dans la journée.</p>
+                <a href="/lignes" class="btn secondary" style="width: 100%;">Voir les DLCs requis</a>
             </div>
         </div>
     </main>
