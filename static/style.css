@@ -57,10 +57,16 @@ header .container {
     color: var(--accent);
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 nav a {
     color: var(--text-muted);
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 18px;
     font-weight: 500;
     font-size: 0.95rem;
     transition: color 0.2s ease;
@@ -126,7 +132,7 @@ main.container {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
