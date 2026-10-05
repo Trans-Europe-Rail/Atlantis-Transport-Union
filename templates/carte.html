@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ atu.nom }} — Carte & GPS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <h1>{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
+            </div>
+            <nav>
+                <a href="/">Accueil</a>
+                <a href="/lignes">Réseau</a>
+                <a href="/carte" class="active">Carte & GPS</a>
+                <a href="/classement">Classement</a>
+                <a href="/factures">Trésorerie</a>
+                <a href="/recrutement">Recrutement</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero" style="padding: 40px 20px;">
+            <h2>Navigation & Cartographie Live</h2>
+            <p>Retrouvez les outils de suivi GPS et les cartes compatibles pour nos convois longue distance (ProMods, TruckersMP, et axes de l'ATU).</p>
+        </section>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Outil GPS Compagnon</h3>
+                <p style="color: var(--text-muted); margin: 10px 0 20px 0;">Optimisez l'immersion de vos livraisons (notamment sur la ligne Lisbonne - Narvik) en couplant votre jeu avec un tableau de bord GPS externe.</p>
+                <a href="https://trucksimgps.com" target="_blank" class="btn">Lien TruckSim GPS</a>
+            </div>
+            <div class="card">
+                <h3>Carte Interactive TruckersMP</h3>
+                <p style="color: var(--text-muted); margin: 10px 0 20px 0;">Suivez le trafic en temps réel, les zones de congestion sur les serveurs multijoueurs et l'emplacement des collègues de la VTC.</p>
+                <a href="https://truckersmp.com/map" target="_blank" class="btn secondary">Ouvrir la Map Live</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 {{ atu.nom }} — Conçu par {{ atu.auteur }}</p>
+    </footer>
+</body>
+</html>
