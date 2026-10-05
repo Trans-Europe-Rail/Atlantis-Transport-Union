@@ -5,7 +5,7 @@ app = Flask(__name__)
 ATU_INFO = {
     "nom": "Atlantis Transport Union",
     "tag": "ATU",
-    "philosophie": "Simulation hardcore, rigueur économique et KM 0",
+    "philosophie": "Simulation hardcore, rigueur économique et politique KM 0",
     "auteur": "Trans_Europe_Rail"
 }
 
@@ -64,9 +64,9 @@ def classement():
 def gestion_flotte():
     return render_template('factures.html', atu=ATU_INFO)
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
 @app.route('/recrutement')
 def recrutement():
     return render_template('recrutement.html', atu=ATU_INFO)
+
+if __name__ == '__main__':
+    app.run(debug=True)
