@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>{{ atu.nom }} — Accueil</title>
+    <title>{{ atu.nom }} — Accueil & Recrutement</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -13,7 +13,9 @@
             </div>
             <nav>
                 <a href="/" class="active">Accueil</a>
+                <a href="/actifs">Actifs</a>
                 <a href="/lignes">Réseau</a>
+                <a href="/carte">Carte & GPS</a>
                 <a href="/classement">Classement</a>
                 <a href="/factures">Trésorerie</a>
                 <a href="/recrutement">Recrutement</a>
@@ -23,28 +25,30 @@
 
     <main class="container">
         <section class="hero">
-            <h2>L'Excellence du Transport Européen</h2>
-            <p>Bienvenue sur le portail officiel de l'ATU. Une communauté soudée de passionnés de simulation sur ETS2, guidée par une gestion financière transparente et rigoureuse.</p>
+            <h2>Rejoignez l'Élite des Routiers Européens</h2>
+            <p>L'<strong>Atlantis Transport Union (ATU)</strong> recrute des conducteurs motivés et actifs. Simulation rigoureuse sur ETS2, gestion financière transparente et ambiance communautaire garantie.</p>
             <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="https://hub.truckyapp.com/vtc/atlantis-transport-union" target="_blank" class="btn">Hub Trucky</a>
-                <a href="/recrutement" class="btn secondary">Rejoindre la VTC</a>
+                <a href="/recrutement" class="btn">Postuler dès maintenant</a>
+                <a href="https://discord.gg/5TjzBtzy56" target="_blank" class="btn secondary">Rejoindre notre Discord</a>
             </div>
         </section>
 
         <div class="grid">
             <div class="card">
-                <h3>Esprit d'équipe & Convivialité</h3>
-                <p style="color: var(--text-muted);">Rejoins une équipe active où la bonne humeur sur Discord et la passion de la route se conjuguent avec le sérieux.</p>
+                <h3>Chauffeurs Actifs</h3>
+                <p style="color: var(--text-muted); margin-bottom: 15px;">Suivez en direct l'engagement de nos effectifs sur les routes d'Europe.</p>
+                <a href="/actifs" class="btn secondary" style="font-size: 0.9rem; padding: 8px 16px;">Voir les actifs</a>
             </div>
             <div class="card">
-                <h3>Réseau & Expéditions</h3>
-                <p style="color: var(--text-muted);">De Madrid à Istanbul, ou de Lisbonne jusqu'au cercle polaire à Narvik, relève des défis logistiques uniques.</p>
+                <h3>Trésorerie Transparente</h3>
+                <p style="color: var(--text-muted); margin-bottom: 15px;">SuIVI rigoureux des dépenses en carburant et de l'acquisition de notre flotte.</p>
+                <a href="/factures" class="btn secondary" style="font-size: 0.9rem; padding: 8px 16px;">Consulter les comptes</a>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 {{ atu.nom }} — Conçu par {{ atu.auteur }} — Tous droits réservés.</p>
+        <p>&copy; 2026 {{ atu.nom }} — Conçu par {{ atu.auteur }}</p>
     </footer>
 </body>
 </html>
