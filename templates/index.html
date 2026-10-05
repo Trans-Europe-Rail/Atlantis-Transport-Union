@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>{{ atu.nom }} ({{ atu.tag }}) — Accueil</title>
+    <title>{{ atu.nom }} — Accueil</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -15,7 +15,7 @@
                 <a href="/" class="active">Accueil</a>
                 <a href="/lignes">Réseau</a>
                 <a href="/classement">Classement</a>
-                <a href="/gestion-flotte">Trésorerie</a>
+                <a href="/factures">Trésorerie</a>
                 <a href="/recrutement">Recrutement</a>
             </nav>
         </div>
@@ -23,22 +23,22 @@
 
     <main class="container">
         <section class="hero">
-            <h2>L'Excellence du Transport Virtuel</h2>
-            <p>Bienvenue sur le portail officiel de l'Atlantis Transport Union. Spécialisés dans la simulation stricte sur ETS2, nous appliquons une politique <strong>KM 0</strong> rigoureuse : gestion financière réaliste, zéro triche, et cohésion d'équipe irréprochable.</p>
-            <div class="cta-buttons">
-                <a href="https://hub.truckyapp.com/vtc/atlantis-transport-union" target="_blank" class="btn">Accéder au Hub Trucky</a>
-                <a href="/recrutement" class="btn secondary">Rejoindre nos rangs</a>
+            <h2>L'Excellence du Transport Européen</h2>
+            <p>Bienvenue sur le portail officiel de l'ATU. Une communauté soudée de passionnés de simulation sur ETS2, guidée par une gestion financière transparente et rigoureuse.</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://hub.truckyapp.com/vtc/atlantis-transport-union" target="_blank" class="btn">Hub Trucky</a>
+                <a href="/recrutement" class="btn secondary">Rejoindre la VTC</a>
             </div>
         </section>
 
-        <div class="grid-2">
+        <div class="grid">
             <div class="card">
-                <h3>Politique KM 0</h3>
-                <p style="color: var(--text-muted); margin-top: 10px;">Chaque kilomètre compte. Nous privilégions l'immersion totale, le respect du code de la route et un suivi comptable transparent pour tous nos chauffeurs.</p>
+                <h3>Esprit d'équipe & Convivialité</h3>
+                <p style="color: var(--text-muted);">Rejoins une équipe active où la bonne humeur sur Discord et la passion de la route se conjuguent avec le sérieux.</p>
             </div>
             <div class="card">
-                <h3>Une communauté active</h3>
-                <p style="color: var(--text-muted); margin-top: 10px;">Rejoins un réseau soudé de passionnés répartis à travers l'Europe, de Madrid aux portes d'Istanbul, encadré par des professionnels.</p>
+                <h3>Réseau & Expéditions</h3>
+                <p style="color: var(--text-muted);">De Madrid à Istanbul, ou de Lisbonne jusqu'au cercle polaire à Narvik, relève des défis logistiques uniques.</p>
             </div>
         </div>
     </main>
