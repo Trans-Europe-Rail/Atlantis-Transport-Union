@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ atu.nom }} — Réseau Européen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>{{ atu.nom }} [{{ atu.tag }}]</h1>
+            <nav>
+                <a href="/">Accueil</a>
+                <a href="/lignes">Réseau & Hubs</a>
+                <a href="/classement">Classement</a>
+                <a href="/gestion-flotte">Trésorerie</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Réseau Européen & Hubs Logistiques</h2>
+        <p>L'ATU opère sur l'ensemble des routes d'ETS2. Nos chauffeurs gèrent des milliers de trajets différents à travers l'Europe, appuyés par nos grands hubs stratégiques.</p>
+
+        <h3>📍 Nos Hubs Principaux</h3>
+        <div class="grid">
+            {% for hub in hubs %}
+            <div class="card">
+                <h3>{{ hub.ville }} ({{ hub.pays }})</h3>
+                <p><strong>Rôle :</strong> {{ hub.type }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h3 style="margin-top: 40px;">🌟 Exemples de Trajets Phares</h3>
+        <div class="grid">
+            {% for ligne in lignes %}
+            <div class="card">
+                <h3>{{ ligne.depart }} ➔ {{ ligne.arrivee }}</h3>
+                <p><strong>Distance :</strong> ~{{ ligne.km }} km</p>
+                <p><strong>Type :</strong> {{ ligne.type_convoi }}</p>
+                <p>{{ ligne.description }}</p>
+                <span class="badge actif">{{ ligne.statut }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 {{ atu.nom }} — Créé par {{ atu.auteur }}</p>
+    </footer>
+</body>
+</html>
