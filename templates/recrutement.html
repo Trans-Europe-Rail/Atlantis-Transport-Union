@@ -13,36 +13,44 @@
             </div>
             <nav>
                 <a href="/">Accueil</a>
+                <a href="/actifs">Actifs</a>
                 <a href="/lignes">Réseau</a>
+                <a href="/carte">Carte & GPS</a>
                 <a href="/classement">Classement</a>
-                <a href="/gestion-flotte">Trésorerie</a>
+                <a href="/factures">Trésorerie</a>
                 <a href="/recrutement" class="active">Recrutement</a>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <section class="hero" style="padding: 40px 20px; margin-bottom: 30px;">
-            <h2>Rejoindre l'Atlantis Transport Union</h2>
-            <p>Tu partages notre vision d'une simulation sérieuse et rigoureuse ? Notre processus de recrutement est ouvert aux conducteurs motivés.</p>
+        <section class="hero" style="padding: 40px 20px;">
+            <h2>Nous Recrutons du Personnel Actif</h2>
+            <p>Tu cherches une VTC sérieuse, mature et impliquée sur Euro Truck Simulator 2 ? L'ATU t'ouvre ses portes pour relever les défis de fret à travers l'Europe.</p>
         </section>
 
-        <div class="grid-2">
+        <div class="grid">
             <div class="card">
-                <h3>Étape 1 : Le Contact</h3>
-                <p style="color: var(--text-muted); margin-top: 10px; margin-bottom: 20px;">Viens te présenter sur notre serveur Discord officiel pour échanger avec notre équipe de direction.</p>
-                <a href="https://discord.gg/5TjzBtzy56" target="_blank" class="btn secondary">Rejoindre le Discord</a>
+                <h3>1. Critères d'Admission</h3>
+                <ul style="color: var(--text-muted); margin: 15px 0 0 20px; font-size: 0.95rem;">
+                    <li>Être âgé de 18 ans minimum (maturité requise).</li>
+                    <li>Posséder ETS2 avec un comportement respectueux sur les routes.</li>
+                    <li>Être actif sur Discord et participer aux convois réguliers.</li>
+                </ul>
             </div>
             <div class="card">
-                <h3>Étape 2 : La Candidature</h3>
-                <p style="color: var(--text-muted); margin-top: 10px; margin-bottom: 20px;">Remplis ton dossier de recrutement officiel directement via notre plateforme Trucky.</p>
-                <a href="https://hub.truckyapp.com/vtc/atlantis-transport-union/apply" target="_blank" class="btn">Postuler sur Trucky</a>
+                <h3>2. Comment Postuler ?</h3>
+                <p style="color: var(--text-muted); margin: 10px 0 20px 0;">Dépose ton dossier de candidature en ligne sur notre plateforme partenaire Trucky ou viens te présenter sur notre Discord.</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <a href="https://hub.truckyapp.com/vtc/atlantis-transport-union/apply" target="_blank" class="btn">Postuler sur Trucky</a>
+                    <a href="https://discord.gg/5TjzBtzy56" target="_blank" class="btn secondary">Rejoindre Discord</a>
+                </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 {{ atu.nom }} — Conçu par {{ atu.auteur }} — Tous droits réservés.</p>
+        <p>&copy; 2026 {{ atu.nom }} — Conçu par {{ atu.auteur }}</p>
     </footer>
 </body>
 </html>
