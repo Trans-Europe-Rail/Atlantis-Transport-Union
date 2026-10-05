@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Introuvable — Atlantis Transport Union</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root { --navy: #07111F; --gold: #FFD260; --paper: #FFFFFF; --muted: #A3B8CC; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: var(--navy); color: var(--paper); font-family: 'IBM Plex Sans', sans-serif; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; }
-  h1 { font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 6vw, 3.5rem); color: var(--gold); margin-bottom: 16px; }
-  p { color: var(--muted); margin-bottom: 30px; }
-  a { color: var(--paper); text-decoration: underline; }
-</style>
+    <meta charset="UTF-8">
+    <title>{{ atu.nom }} — Page Introuvable (404)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <h1>Terminus.</h1>
-  <p>Cette page n'existe pas — vérifie l'adresse ou retourne à l'accueil.</p>
-  <a href="/">← Retour à l'accueil</a>
+    <header>
+        <div class="container">
+            <h1>{{ atu.nom }} [{{ atu.tag }}]</h1>
+            <p>Erreur 404 — Hors-piste</p>
+            <nav>
+                <a href="/">Accueil</a>
+                <a href="/lignes">Réseau & Hubs</a>
+                <a href="/classement">Classement</a>
+                <a href="/gestion-flotte">Trésorerie</a>
+                <a href="/recrutement">Recrutement</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="text-align: center; padding: 60px 0;">
+        <div class="card" style="max-width: 600px; margin: 0 auto;">
+            <h2 style="font-size: 3rem; color: #f87171; margin-bottom: 10px;">404</h2>
+            <h3>Oups, tu as pris la mauvaise bretelle d'autoroute !</h3>
+            <p style="margin: 20px 0;">La route que tu essaies d'emprunter n'existe pas ou a été déplacée sur le réseau de l'ATU.</p>
+            <a href="/" class="btn" style="margin-top: 15px;">Retourner au dépôt principal (Accueil)</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 {{ atu.nom }} — Conçu par {{ atu.auteur }} — Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
