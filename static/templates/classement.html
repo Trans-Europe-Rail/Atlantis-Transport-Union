@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ atu.nom }} — Classement</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>{{ atu.nom }} [{{ atu.tag }}]</h1>
+            <nav>
+                <a href="/">Accueil</a>
+                <a href="/lignes">Réseau & Hubs</a>
+                <a href="/classement">Classement</a>
+                <a href="/gestion-flotte">Trésorerie</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Tableau d'Honneur de la Flotte</h2>
+        <p>Suivi des performances et de l'implication de nos routiers sur le terrain.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Rang</th>
+                    <th>Conducteur</th>
+                    <th>Missions validées</th>
+                    <th>Kilomètres parcourus</th>
+                    <th>Statut</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Trans_Europe_Rail</td>
+                    <td>42</td>
+                    <td>45 200 km</td>
+                    <td><span class="badge actif">Fondateur / Routier</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 {{ atu.nom }} — Créé par {{ atu.auteur }}</p>
+    </footer>
+</body>
+</html>
