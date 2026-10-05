@@ -8,29 +8,35 @@
 <body>
     <header>
         <div class="container">
-            <h1>{{ atu.nom }} [{{ atu.tag }}]</h1>
+            <div class="logo-area">
+                <h1>{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
+            </div>
             <nav>
                 <a href="/">Accueil</a>
-                <a href="/lignes">Réseau & Hubs</a>
+                <a href="/lignes">Réseau</a>
                 <a href="/classement">Classement</a>
                 <a href="/gestion-flotte">Trésorerie</a>
-                <a href="/recrutement">Recrutement</a>
+                <a href="/recrutement" class="active">Recrutement</a>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <h2>Rejoindre l'Atlantis Transport Union</h2>
-        <p>Tu cherches une VTC sérieuse, basée sur le réalisme pur et la politique <strong>KM 0</strong> ? Tu es au bon endroit. Ici, pas de triche, que du pilotage propre à travers l'Europe.</p>
+        <section class="hero" style="padding: 40px 20px; margin-bottom: 30px;">
+            <h2>Rejoindre l'Atlantis Transport Union</h2>
+            <p>Tu partages notre vision d'une simulation sérieuse et rigoureuse ? Notre processus de recrutement est ouvert aux conducteurs motivés.</p>
+        </section>
 
-        <div class="card" style="margin-top: 20px;">
-            <h3>Comment postuler ?</h3>
-            <p>1. Rejoins notre communauté sur notre serveur Discord officiel.</p>
-            <p>2. Soumets ta candidature directement via notre page de recrutement Trucky.</p>
-            
-            <div style="margin-top: 25px;">
-                <a href="https://discord.gg/5TjzBtzy56" target="_blank" class="btn">Rejoindre le Discord</a>
-                <a href="https://hub.truckyapp.com/vtc/atlantis-transport-union/apply" target="_blank" class="btn secondary">Postuler sur Trucky</a>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Étape 1 : Le Contact</h3>
+                <p style="color: var(--text-muted); margin-top: 10px; margin-bottom: 20px;">Viens te présenter sur notre serveur Discord officiel pour échanger avec notre équipe de direction.</p>
+                <a href="https://discord.gg/5TjzBtzy56" target="_blank" class="btn secondary">Rejoindre le Discord</a>
+            </div>
+            <div class="card">
+                <h3>Étape 2 : La Candidature</h3>
+                <p style="color: var(--text-muted); margin-top: 10px; margin-bottom: 20px;">Remplis ton dossier de recrutement officiel directement via notre plateforme Trucky.</p>
+                <a href="https://hub.truckyapp.com/vtc/atlantis-transport-union/apply" target="_blank" class="btn">Postuler sur Trucky</a>
             </div>
         </div>
     </main>
