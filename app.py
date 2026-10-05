@@ -66,3 +66,7 @@ def gestion_flotte():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+@app.route('/recrutement')
+def recrutement():
+    return render_template('recrutement.html', atu=ATU_INFO)
