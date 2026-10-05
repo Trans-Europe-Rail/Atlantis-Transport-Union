@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ atu.nom }} — Chauffeurs Actifs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <h1>{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
+            </div>
+            <nav>
+                <a href="/">Accueil</a>
+                <a href="/actifs" class="active">Actifs</a>
+                <a href="/lignes">Réseau</a>
+                <a href="/carte">Carte & GPS</a>
+                <a href="/classement">Classement</a>
+                <a href="/factures">Trésorerie</a>
+                <a href="/recrutement">Recrutement</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero" style="padding: 40px 20px;">
+            <h2>Effectifs Actifs</h2>
+            <p>Retrouvez la liste de nos conducteurs actuellement engagés et en mission sur le réseau.</p>
+        </section>
+
+        {% if actifs %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Chauffeur</th>
+                    <th>Statut</th>
+                    <th>Dernière mission</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for chauffeur in actifs %}
+                <tr>
+                    <td><strong>{{ chauffeur.nom }}</strong></td>
+                    <td><span style="color: var(--success);">● En ligne / Actif</span></td>
+                    <td>{{ chauffeur.derniere_mission }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <div class="card" style="text-align: center; padding: 40px;">
+            <p style="color: var(--text-muted);">Aucune donnée temps réel connectée pour le moment. Rejoignez-nous pour garnir les rangs !</p>
+            <br>
+            <a href="/recrutement" class="btn">Devenir conducteur actif</a>
+        </div>
+        {% endif %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 {{ atu.nom }} — Conçu par {{ atu.auteur }}</p>
+    </footer>
+</body>
+</html>
