@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ atu.nom }} — Recrutement</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>{{ atu.nom }} [{{ atu.tag }}]</h1>
+            <nav>
+                <a href="/">Accueil</a>
+                <a href="/lignes">Réseau & Hubs</a>
+                <a href="/classement">Classement</a>
+                <a href="/gestion-flotte">Trésorerie</a>
+                <a href="/recrutement">Recrutement</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Rejoindre l'Atlantis Transport Union</h2>
+        <p>Tu cherches une VTC sérieuse, basée sur le réalisme pur et la politique <strong>KM 0</strong> ? Tu es au bon endroit. Ici, pas de triche, que du pilotage propre à travers l'Europe.</p>
+
+        <div class="card" style="margin-top: 20px;">
+            <h3>Comment postuler ?</h3>
+            <p>1. Rejoins notre communauté sur notre serveur Discord officiel.</p>
+            <p>2. Remplis le formulaire de recrutement dans le salon dédié.</p>
+            <p>3. Attends la validation de la direction pour prendre la route !</p>
+            <a href="https://discord.com" target="_blank" class="btn" style="margin-top: 15px;">Rejoindre le Discord</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 {{ atu.nom }} — Créé par {{ atu.auteur }} — Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
