@@ -8,11 +8,12 @@
 <body>
     <header>
         <div class="container">
-            <h1>{{ atu.nom }} [{{ atu.tag }}]</h1>
-            <p>{{ atu.philosophie }}</p>
+            <div class="logo-area">
+                <h1>{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
+            </div>
             <nav>
-                <a href="/">Accueil</a>
-                <a href="/lignes">Réseau & Hubs</a>
+                <a href="/" class="active">Accueil</a>
+                <a href="/lignes">Réseau</a>
                 <a href="/classement">Classement</a>
                 <a href="/gestion-flotte">Trésorerie</a>
                 <a href="/recrutement">Recrutement</a>
@@ -22,17 +23,28 @@
 
     <main class="container">
         <section class="hero">
-            <h2>Compagnie Virtuelle ETS2 — Simulation Stricte</h2>
-            <p>Bienvenue sur le portail officiel de l'ATU. De Madrid jusqu'aux portes d'Istanbul, nos conducteurs parcourent l'Europe dans le respect total de notre politique <strong>KM 0</strong> : aucun cheat financier, gestion réaliste et cohésion d'équipe.</p>
-            <div class="cta-buttons" style="margin-top: 20px;">
-                <a href="https://hub.truckyapp.com/vtc/atlantis-transport-union" target="_blank" class="btn">Hub Trucky</a>
-                <a href="/recrutement" class="btn secondary">Rejoindre l'équipe</a>
+            <h2>L'Excellence du Transport Virtuel</h2>
+            <p>Bienvenue sur le portail officiel de l'Atlantis Transport Union. Spécialisés dans la simulation stricte sur ETS2, nous appliquons une politique <strong>KM 0</strong> rigoureuse : gestion financière réaliste, zéro triche, et cohésion d'équipe irréprochable.</p>
+            <div class="cta-buttons">
+                <a href="https://hub.truckyapp.com/vtc/atlantis-transport-union" target="_blank" class="btn">Accéder au Hub Trucky</a>
+                <a href="/recrutement" class="btn secondary">Rejoindre nos rangs</a>
             </div>
         </section>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>Politique KM 0</h3>
+                <p style="color: var(--text-muted); margin-top: 10px;">Chaque kilomètre compte. Nous privilégions l'immersion totale, le respect du code de la route et un suivi comptable transparent pour tous nos chauffeurs.</p>
+            </div>
+            <div class="card">
+                <h3>Une communauté active</h3>
+                <p style="color: var(--text-muted); margin-top: 10px;">Rejoins un réseau soudé de passionnés répartis à travers l'Europe, de Madrid aux portes d'Istanbul, encadré par des professionnels.</p>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 {{ atu.nom }} — Conçu et développé par {{ atu.auteur }} — Hébergé à Francfort (EU)</p>
+        <p>&copy; 2026 {{ atu.nom }} — Conçu par {{ atu.auteur }} — Tous droits réservés.</p>
     </footer>
 </body>
 </html>
