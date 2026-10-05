@@ -18,7 +18,7 @@ ATU_INFO = {
 }
 
 def get_dashboard_data():
-    data = {"actifs": [], "classement": [], "historique": [], "historique_complet": []}
+    data = {"actifs": [], "classement": [], "historique": []}
     
     if BOT_API_URL:
         try:
@@ -33,8 +33,8 @@ def get_dashboard_data():
             print(f"Erreur récupération données bot : {e}")
 
     factures = []
-    total_bus = 0
-    total_gazole = 0
+    total_camions = 0
+    total_carburant = 0
     montant_total_depense = 0
 
     if os.path.exists(FICHIER_FACTURES):
@@ -47,9 +47,9 @@ def get_dashboard_data():
                     type_achat = row[2]
 
                     if type_achat == "Camion":
-                        total_bus += montant
+                        total_camions += montant
                     elif type_achat == "Carburant":
-                        total_gazole += montant
+                        total_carburant += montant
                     
                     montant_total_depense += montant
 
@@ -67,8 +67,8 @@ def get_dashboard_data():
 
     data["factures"] = factures
     data["stats_factures"] = {
-        "total_camions": total_bus,
-        "total_carburant": total_gazole,
+        "total_camions": total_camions,
+        "total_carburant": total_carburant,
         "total_global": montant_total_depense,
         "nombre_total": len(factures)
     }
@@ -95,11 +95,6 @@ def page_classement():
     data = get_dashboard_data()
     return render_template("classement.html", atu=ATU_INFO, classement=data.get("classement", []))
 
-@app.route("/historique")
-def page_historique():
-    data = get_dashboard_data()
-    return render_template("historique.html", atu=ATU_INFO, historique=data.get("historique_complet", data.get("historique", [])))
-
 @app.route("/factures")
 def page_factures():
     data = get_dashboard_data()
@@ -116,13 +111,6 @@ def lignes():
 @app.route('/carte')
 def carte():
     return render_template('carte.html', atu=ATU_INFO)
-
-@app.route('/lignes/<numero>')
-def ligne_detail(numero):
-    ligne = LIGNES.get(numero)
-    if not ligne:
-        abort(404)
-    return render_template('ligne_detail.html', atu=ATU_INFO, numero=numero, ligne=ligne)
 
 @app.errorhandler(404)
 def not_found(e):
