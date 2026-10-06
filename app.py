@@ -112,23 +112,33 @@ def lignes():
 def carte():
     return render_template('carte.html', atu=ATU_INFO)
 
+@app.route('/reglement')
+def reglement():
+    return render_template('reglement.html', atu=ATU_INFO)
+
+@app.route('/historique')
+def historique():
+    return render_template('historique.html', atu=ATU_INFO)
+
+@app.route('/conducteur')
+def conducteur():
+    return render_template('conducteur.html', atu=ATU_INFO)
+
+@app.route('/garage')
+def garage():
+    return render_template('garage.html', atu=ATU_INFO)
+
+@app.route('/partenariats')
+def partenariats():
+    return render_template('partenariats.html', atu=ATU_INFO)
+
+@app.route('/discord')
+def discord():
+    return render_template('discord.html', atu=ATU_INFO)
+
 @app.errorhandler(404)
 def not_found(e):
     return render_template("404.html", atu=ATU_INFO), 404
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
-
-@app.route('/reglement')
-def reglement():
-    return render_template('reglement.html', atu=atu_config)
-
-@app.route('/historique')
-def historique():
-    return render_template('historique.html', atu=atu_config)
-
-@app.route('/conducteur')
-def conducteur():
-    return render_template('conducteur.html', atu=atu_config)
-
-
