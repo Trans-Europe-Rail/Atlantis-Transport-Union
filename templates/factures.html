@@ -29,60 +29,10 @@
         </div>
     </header>
     <main class="container" style="padding: 20px; min-height: 70vh;">
-        <h2>Trésorerie & Factures de l'entreprise</h2>
-        <div class="treasury-section">
-            {% if factures %}
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID Mission</th>
-                            <th>Chauffeur</th>
-                            <th>Client / Trajet</th>
-                            <th>Montant</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for f in factures %}
-                        <tr>
-                            <td>#{{ f.id }}</td>
-                            <td>{{ f.chauffeur }}</td>
-                            <td>{{ f.trajet }}</td>
-                            <td>{{ f.montant }} €</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            {% else %}
-                <p>Synchronisation des factures et gains de missions Trucky en cours...</p>
-            {% endif %}
-        </div>
-    </main>
-    <footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; font-size: 0.9rem;">
-        <p>&copy; 2026 Atlantis Transport Union (ATU) — Créé et géré par ton pseudo. Tous droits réservés.</p>
-    </footer>
-</body>
-</html>
-
-    <main class="container">
-        <section class="hero" style="padding: 40px 20px;">
+        <section class="hero" style="padding: 20px 0;">
             <h2>Trésorerie & Gestion Financière</h2>
-            <p>Suivi comptable transparent des investissements de l'entreprise (achats de camions et frais de carburant).</p>
+            <p>Suivi comptable transparent des investissements de l'entreprise (achats de camions et frais de carburant)[cite: 10].</p>
         </section>
-
-        <div class="grid" style="margin-bottom: 30px;">
-            <div class="card">
-                <h3>Total Camions</h3>
-                <p style="font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-top: 5px;">{{ stats_factures.total_camions }} €</p>
-            </div>
-            <div class="card">
-                <h3>Total Carburant</h3>
-                <p style="font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-top: 5px;">{{ stats_factures.total_carburant }} €</p>
-            </div>
-            <div class="card">
-                <h3>Dépenses Globales</h3>
-                <p style="font-size: 1.8rem; font-weight: 700; color: var(--success); margin-top: 5px;">{{ stats_factures.total_global }} €</p>
-            </div>
-        </div>
 
         {% if factures %}
         <table>
@@ -109,12 +59,11 @@
         </table>
         {% else %}
         <div class="card" style="text-align: center; padding: 30px;">
-            <p style="color: var(--text-muted);">Aucune facture enregistrée pour l'instant.</p>
+            <p style="color: var(--text-muted);">Aucune facture enregistrée pour l'instant[cite: 10].</p>
         </div>
         {% endif %}
     </main>
-
-    <footer>
+    <footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; font-size: 0.9rem;">
         <p>&copy; 2026 {{ atu.nom }} — Conçu par {{ atu.auteur }}</p>
     </footer>
 </body>
