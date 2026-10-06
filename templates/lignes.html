@@ -31,13 +31,16 @@
     <main class="container" style="padding: 20px; min-height: 70vh;">
         <section class="hero" style="padding: 40px 20px;">
             <h2>Nos Axes & Prérequis Cartographiques</h2>
-            <p>De Madrid jusqu'à Istanbul, et sur notre ligne géante de 5000 km reliant Lisbonne à Narvik, voici les itinéraires de l'ATU et les extensions obligatoires pour rouler avec nous.</p>
+            <p>De Madrid jusqu'à Istanbul, et sur notre ligne géante de 5000 km reliant Lisbonne à Narvik, voici les itinéraires de l'ATU et les extensions obligatoires pour rouler avec nous[cite: 18].</p>
         </section>
 
         <!-- Liste des DLCs Requis -->
         <div class="card" style="margin-bottom: 40px; border-color: var(--accent);">
             <h3 style="color: var(--accent); margin-bottom: 15px;">📦 Liste officielle des DLCs Requis</h3>
-            <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem;">Pour accéder à l'intégralité de nos lignes et participer aux missions de l'entreprise, la possession de ces extensions sur Steam est obligatoire :</p>
+            <p style="color: var(--text-muted); margin-bottom: 12px; font-size: 0.95ln; line-height: 1.6;">
+                Étant donné que <strong>des missions aléatoires peuvent avoir lieu à tout moment</strong> sur l'ensemble de notre réseau, la possession de ces extensions sur Steam est <strong>obligatoire</strong> pour pouvoir accepter et rouler sur toutes nos affectations[cite: 18].
+            </p>
+            <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 0.9rem;">Assure-toi d'avoir l'ensemble des DLCs ci-dessous installés[cite: 18] :</p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;">
                 <a href="https://store.steampowered.com/app/2780810/Euro_Truck_Simulator_2__Nordic_Horizons/" target="_blank" class="btn secondary" style="text-align: left; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center;">
@@ -84,10 +87,7 @@
                 <h3 style="margin-top: 5px;">{{ ligne.depart }} ➔ {{ ligne.arrivee }}</h3>
                 <p style="color: var(--text-muted); font-size: 0.95rem; margin: 10px 0;">{{ ligne.description }}</p>
                 <div style="background: rgba(56, 189, 248, 0.05); padding: 10px; border-radius: 6px; border: 1px solid var(--border-color);">
-                    <strong style="font-size: 0.85rem; color: var(--text-main);">Distance :</strong> <span style="color: var(--accent);">{{ ligne.km }} km</span><br>
-                    {% if ligne.arrets %}
-                    <strong style="font-size: 0.85rem; color: var(--text-main);">Étapes :</strong> <span style="color: var(--text-muted); font-size: 0.9rem;">{{ ", ".join(ligne.arrets) }}</span>
-                    {% endif %}
+                    <strong style="font-size: 0.85rem; color: var(--text-main);">Distance :</strong> <span style="color: var(--accent);">{{ ligne.km }} km</span>
                 </div>
             </div>
             {% endfor %}
