@@ -29,44 +29,9 @@
         </div>
     </header>
     <main class="container" style="padding: 20px; min-height: 70vh;">
-        <h2>Classement des Chauffeurs (Missions Trucky)</h2>
-        <div class="ranking-section">
-            {% if classement %}
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Rang</th>
-                            <th>Chauffeur</th>
-                            <th>Missions</th>
-                            <th>Kilomètres</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for driver in classement %}
-                        <tr>
-                            <td>#{{ loop.index }}</td>
-                            <td>{{ driver.nom }}</td>
-                            <td>{{ driver.missions }}</td>
-                            <td>{{ driver.km }} km</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            {% else %}
-                <p>Récupération du classement des missions terminées sur Trucky...</p>
-            {% endif %}
-        </div>
-    </main>
-    <footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; font-size: 0.9rem;">
-        <p>&copy; 2026 Atlantis Transport Union (ATU) — Créé et géré par ton pseudo. Tous droits réservés.</p>
-    </footer>
-</body>
-</html>
-
-    <main class="container">
-        <section class="hero" style="padding: 40px 20px;">
+        <section class="hero" style="padding: 20px 0;">
             <h2>Classement des Conducteurs</h2>
-            <p>Le palmarès de nos chauffeurs les plus assidus et performants sur les routes de l'Union.</p>
+            <p>Le palmarès de nos chauffeurs les plus assidus et performants sur les routes de l'Union[cite: 7].</p>
         </section>
 
         {% if classement %}
@@ -92,14 +57,13 @@
         </table>
         {% else %}
         <div class="card" style="text-align: center; padding: 40px;">
-            <p style="color: var(--text-muted);">Le classement s'actualisera dès la synchronisation des premières données de livraison.</p>
+            <p style="color: var(--text-muted);">Le classement s'actualisera dès la synchronisation des premières données de livraison[cite: 7].</p>
             <br>
             <a href="/recrutement" class="btn">Rejoindre l'équipe pour grimper au classement</a>
         </div>
         {% endif %}
     </main>
-
-    <footer>
+    <footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; font-size: 0.9rem;">
         <p>&copy; 2026 {{ atu.nom }} — Conçu par {{ atu.auteur }}</p>
     </footer>
 </body>
