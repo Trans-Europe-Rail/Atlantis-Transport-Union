@@ -7,25 +7,33 @@
 </head>
 <body>
     <header>
-    <div class="container" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;">
-        <div class="logo-area" style="display: flex; align-items: center; gap: 14px;">
-            <img src="{{ url_for('static', filename='Designer.png') }}" alt="Logo ATU" style="height: 50px; width: auto; object-fit: contain;">
-            <h1 style="margin: 0; font-size: 1.25rem;">{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;">
+            <div class="logo-area" style="display: flex; align-items: center; gap: 14px;">
+                <img src="{{ url_for('static', filename='Designer.png') }}" alt="Logo ATU" style="height: 50px; width: auto; object-fit: contain;">
+                <h1 style="margin: 0; font-size: 1.25rem;">{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
+            </div>
+            <nav style="display: flex; gap: 15px; flex-wrap: wrap;">
+                <a href="/">Accueil</a>
+                <a href="/actifs">Actifs</a>
+                <a href="/lignes">Réseau</a>
+                <a href="/carte">Carte & GPS</a>
+                <a href="/classement">Classement</a>
+                <a href="/factures">Trésorerie</a>
+                <a href="/recrutement">Recrutement</a>
+                <a href="/reglement">Règlement</a>
+                <a href="/conducteur">Mon Profil</a>
+                <a href="/garage">Garage</a>
+                <a href="/partenariats">Partenaires</a>
+                <a href="/discord">Discord</a>
+            </nav>
         </div>
-        <nav style="display: flex; gap: 15px;">
-            <a href="/">Accueil</a>
-            <a href="/actifs">Actifs</a>
-            <a href="/lignes">Réseau</a>
-            <a href="/carte">Carte & GPS</a>
-            <a href="/classement">Classement</a>
-            <a href="/factures">Trésorerie</a>
-            <a href="/recrutement">Recrutement</a>
-        </nav>
-    </div>
-</header>
-    <main class="container">
+    </header>
+    <main class="container" style="padding: 20px;">
         <h2>Carte GPS en temps réel</h2>
-        <p>Suivi des positions de la flotte.</p>
+        <div class="map-container" style="width: 100%; height: 70vh; background: #111; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff;">
+            <!-- Intégration de la télémétrie / carte Trucky -->
+            <p>Affichage de la carte des positions de la flotte en direct...</p>
+        </div>
     </main>
 </body>
 </html>
