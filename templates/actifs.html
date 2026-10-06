@@ -7,24 +7,24 @@
 </head>
 <body>
 <header>
-        <div class="container">
-            <div class="logo-area" style="display: flex; align-items: center; gap: 12px;">
-                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo ATU" style="height: 45px; width: auto; object-fit: contain;">
-                <div>
-                    <h1>{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
-                </div>
+    <div class="container">
+        <div class="logo-area" style="display: flex; align-items: center; gap: 12px;">
+            <img src="{{ url_for('static', filename='Designer.png') }}" alt="Logo ATU" style="height: 45px; width: auto; object-fit: contain;">
+            <div>
+                <h1>{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
             </div>
-            <nav>
-                <a href="/">Accueil</a>
-                <a href="/actifs">Actifs</a>
-                <a href="/lignes">Réseau</a>
-                <a href="/carte">Carte & GPS</a>
-                <a href="/classement">Classement</a>
-                <a href="/factures">Trésorerie</a>
-                <a href="/recrutement">Recrutement</a>
-            </nav>
         </div>
-    </header>
+        <nav>
+            <a href="/">Accueil</a>
+            <a href="/actifs">Actifs</a>
+            <a href="/lignes">Réseau</a>
+            <a href="/carte">Carte & GPS</a>
+            <a href="/classement">Classement</a>
+            <a href="/factures">Trésorerie</a>
+            <a href="/recrutement">Recrutement</a>
+        </nav>
+    </div>
+</header>
 
     <main class="container">
         <section class="hero" style="padding: 40px 20px;">
