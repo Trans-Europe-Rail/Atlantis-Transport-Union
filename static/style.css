@@ -17,18 +17,14 @@
 }
 
 body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background-color: var(--bg-main);
-    /* Fond d'écran professionnel inspiré du simulateur et du logo : dégradé clair et texture d'axe routier / horizon */
-    background-image: linear-gradient(rgba(241, 245, 249, 0.93), rgba(241, 245, 249, 0.95)), 
-                      radial-gradient(circle at 50% 10%, rgba(2, 132, 199, 0.08) 0%, transparent 60%);
-    background-attachment: fixed;
-    background-size: cover;
-    color: var(--text-main);
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    /* Remplace 'fond.jpg' par le vrai nom de ton fichier image */
+    background-image: url("R-450-Plus-estrada-scaled.jpg");
+    background-size: cover;          /* L'image s'adapte pour couvrir tout l'écran */
+    background-position: center;     /* Centre l'image */
+    background-attachment: fixed;    /* L'image reste fixe quand on scroll */
+    color: #ffffff;                  /* Met le texte en blanc pour qu'il soit bien lisible par-dessus le fond */
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 /* --- HEADER & NAVIGATION --- */
