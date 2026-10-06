@@ -118,3 +118,17 @@ def not_found(e):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+
+@app.route('/reglement')
+def reglement():
+    return render_template('reglement.html', atu=atu_config)
+
+@app.route('/historique')
+def historique():
+    return render_template('historique.html', atu=atu_config)
+
+@app.route('/conducteur')
+def conducteur():
+    return render_template('conducteur.html', atu=atu_config)
+
+
