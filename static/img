@@ -1,2 +1,0 @@
-mkdir -p static/img
-copy "C:\Users\lecoc\Downloads\Designer.png" static\img\logo.png
