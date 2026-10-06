@@ -12,7 +12,7 @@
                 <img src="{{ url_for('static', filename='Designer.png') }}" alt="Logo ATU" style="height: 50px; width: auto; object-fit: contain;">
                 <h1 style="margin: 0; font-size: 1.25rem;">{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
             </div>
-            <nav style="display: flex; gap: 15px;">
+            <nav style="display: flex; gap: 15px; flex-wrap: wrap;">
                 <a href="/">Accueil</a>
                 <a href="/actifs">Actifs</a>
                 <a href="/lignes">Réseau</a>
@@ -22,12 +22,18 @@
                 <a href="/recrutement">Recrutement</a>
                 <a href="/reglement">Règlement</a>
                 <a href="/conducteur">Mon Profil</a>
+                <a href="/garage">Garage</a>
+                <a href="/partenariats">Partenaires</a>
+                <a href="/discord">Discord</a>
             </nav>
         </div>
     </header>
-    <main class="container">
+    <main class="container" style="padding: 20px; min-height: 70vh;">
         <h2>Historique des Convoyages</h2>
-        <p>Retrouve ici les archives des livraisons et des performances passées de l'entreprise.</p>
+        <p>Retrouve ici les archives des livraisons et des performances passées de l'entreprise[cite: 12].</p>
     </main>
+    <footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; font-size: 0.9rem;">
+        <p>&copy; 2026 {{ atu.nom }} — Conçu par {{ atu.auteur }}</p>
+    </footer>
 </body>
 </html>
