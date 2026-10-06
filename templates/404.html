@@ -12,7 +12,7 @@
                 <img src="{{ url_for('static', filename='Designer.png') }}" alt="Logo ATU" style="height: 50px; width: auto; object-fit: contain;">
                 <h1 style="margin: 0; font-size: 1.25rem;">{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
             </div>
-            <nav style="display: flex; gap: 15px;">
+            <nav style="display: flex; gap: 15px; flex-wrap: wrap;">
                 <a href="/">Accueil</a>
                 <a href="/actifs">Actifs</a>
                 <a href="/lignes">Réseau</a>
@@ -20,12 +20,17 @@
                 <a href="/classement">Classement</a>
                 <a href="/factures">Trésorerie</a>
                 <a href="/recrutement">Recrutement</a>
+                <a href="/reglement">Règlement</a>
+                <a href="/conducteur">Mon Profil</a>
+                <a href="/garage">Garage</a>
+                <a href="/partenariats">Partenaires</a>
+                <a href="/discord">Discord</a>
             </nav>
         </div>
     </header>
     <main class="container" style="text-align: center; padding: 50px;">
         <h2>Erreur 404</h2>
-        <p>La page que tu demandes n'existe pas ou a été déplacée.</p>
+        <p>La page demandée n'existe pas ou a été déplacée.</p>
         <a href="/">Retour à l'accueil</a>
     </main>
 </body>
