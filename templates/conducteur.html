@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>{{ atu.nom }} - Espace Chauffeur</title>
+    <title>{{ atu.nom }} - Mon Profil</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -12,7 +12,7 @@
                 <img src="{{ url_for('static', filename='Designer.png') }}" alt="Logo ATU" style="height: 50px; width: auto; object-fit: contain;">
                 <h1 style="margin: 0; font-size: 1.25rem;">{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
             </div>
-            <nav style="display: flex; gap: 15px;">
+            <nav style="display: flex; gap: 15px; flex-wrap: wrap;">
                 <a href="/">Accueil</a>
                 <a href="/actifs">Actifs</a>
                 <a href="/lignes">Réseau</a>
@@ -22,15 +22,18 @@
                 <a href="/recrutement">Recrutement</a>
                 <a href="/reglement">Règlement</a>
                 <a href="/conducteur">Mon Profil</a>
+                <a href="/garage">Garage</a>
+                <a href="/partenariats">Partenaires</a>
+                <a href="/discord">Discord</a>
             </nav>
         </div>
     </header>
-    <main class="container">
-        <h2>Profil du Fondateur & Chauffeur</h2>
+    <main class="container" style="padding: 20px;">
+        <h2>Profil du Fondateur & Chauffeur Principal</h2>
         <div class="card" style="padding: 20px; border: 1px solid #ccc; border-radius: 8px; margin-top: 20px;">
-            <h3>Statut : Fondateur & Chauffeur Principal</h3>
-            <p><strong>Objectif annuel :</strong> 250 000 km</p>
-            <p><strong>Progression actuelle :</strong> Suivi en direct de tes kilomètres parcourus pour atteindre les 250k.</p>
+            <h3>Objectif Annuel</h3>
+            <p><strong>Cible :</strong> 250 000 km parcourus cette année pour l'ATU.</p>
+            <p><strong>Suivi :</strong> Synchronisé avec les données de courses en direct.</p>
         </div>
     </main>
 </body>
