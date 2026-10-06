@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ atu.nom }} - Règlement</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;">
+            <div class="logo-area" style="display: flex; align-items: center; gap: 14px;">
+                <img src="{{ url_for('static', filename='Designer.png') }}" alt="Logo ATU" style="height: 50px; width: auto; object-fit: contain;">
+                <h1 style="margin: 0; font-size: 1.25rem;">{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
+            </div>
+            <nav style="display: flex; gap: 15px;">
+                <a href="/">Accueil</a>
+                <a href="/actifs">Actifs</a>
+                <a href="/lignes">Réseau</a>
+                <a href="/carte">Carte & GPS</a>
+                <a href="/classement">Classement</a>
+                <a href="/factures">Trésorerie</a>
+                <a href="/recrutement">Recrutement</a>
+                <a href="/reglement">Règlement</a>
+                <a href="/conducteur">Mon Profil</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h2>Règlement Intérieur & Chartes</h2>
+        <ul>
+            <li>Respect du code de la route et des autres chauffeurs.</li>
+            <li>Représentation propre de l'ATU sur les serveurs et sur le Discord.</li>
+            <li>Implication dans les objectifs annuels de l'entreprise.</li>
+        </ul>
+    </main>
+</body>
+</html>
