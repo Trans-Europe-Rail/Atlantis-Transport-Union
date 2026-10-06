@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>{{ atu.nom }} — Carte & GPS</title>
+    <title>{{ atu.nom }} — Carte & GPS Requis</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -25,33 +25,31 @@
 
     <main class="container">
         <section class="hero" style="padding: 40px 20px;">
-            <h2>Cartographie & Réseau Officiel SCS</h2>
-            <p>Nos axes de transport reposent exclusivement sur la map SCS officielle (tolérance ProMods acceptée). Aucun multijoueur : la simulation pure en solo s'applique à l'ensemble de nos lignes.</p>
+            <h2>Cartographie & TruckSim GPS Obligatoire</h2>
+            <p>Chez ATU, l'utilisation de <strong>TruckSim GPS</strong> est requise pour tous nos conducteurs. Couplé à notre réseau sur map SCS officielle (tolérance ProMods) et au mode solo strict, il garantit un suivi professionnel de chaque convoi.</p>
         </section>
 
-        <!-- Section Carte du Jeu / Map SCS -->
-        <div class="card" style="padding: 24px; margin-bottom: 30px; text-align: center;">
-            <h3 style="margin-bottom: 15px; text-align: left;">🗺️ Le Territoire de l'ATU (Map SCS)</h3>
-            <div style="background-color: #f1f5f9; border: 1px solid var(--border-color); border-radius: 10px; padding: 40px; text-align: center;">
-                <p style="font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin-bottom: 8px;">Réseau routier officiel SCS Software</p>
-                <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 600px; margin: 0 auto 20px auto;">Nos missions s'étendent de Lisbonne jusqu'à Narvik et couvrent l'intégralité des extensions officielles requises. Le mode solo strict est de rigueur.</p>
-                <span class="btn secondary" style="cursor: default;">Mode Solo / Map SCS Exclusive</span>
-            </div>
+        <!-- Section Outil Requis -->
+        <div class="card" style="padding: 30px; margin-bottom: 30px; text-align: center; border-color: var(--accent);">
+            <h3 style="margin-bottom: 15px; color: var(--text-main);">📍 TruckSim GPS — Outil Officiel Requis</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 650px; margin: 0 auto 20px auto;">Cet outil est indispensable pour assurer la navigation et le suivi en temps réel de vos positions sur l'ensemble de nos lignes (y compris notre axe géant Lisbonne - Narvik).</p>
+            <a href="https://trucksimgps.com" target="_blank" class="btn">Lancer / Télécharger TruckSim GPS</a>
         </div>
 
         <div class="grid">
             <div class="card">
-                <h3>Rappel du Règlement Carte</h3>
-                <p style="color: var(--text-muted); margin: 10px 0 15px 0; font-size: 0.95rem;">
-                    • <strong>Map officielle SCS</strong> obligatoire par défaut.<br>
-                    • <strong>ProMods</strong> toléré sous réserve de compatibilité avec les missions.<br>
-                    • <strong>Zéro multijoueur</strong> et mission bouclée impérativement dans la journée.
+                <h3>Rappel du Règlement Convoi</h3>
+                <p style="color: var(--text-muted); margin: 10px 0 15px 0; font-size: 0.95rem; line-height: 1.7;">
+                    • <strong>TruckSim GPS :</strong> Obligatoire pour rouler.<br>
+                    • <strong>Map SCS / ProMods :</strong> Map officielle de base (ProMods toléré).<br>
+                    • <strong>Solo strict :</strong> Zéro multijoueur.<br>
+                    • <strong>Délai :</strong> Mission réalisée impérativement dans la journée.
                 </p>
-                <a href="/lignes" class="btn secondary" style="width: 100%;">Voir les DLCs de cartes requis</a>
+                <a href="/recrutement" class="btn secondary" style="width: 100%;">Voir les critères de recrutement</a>
             </div>
             <div class="card">
-                <h3>Navigation & Suivi</h3>
-                <p style="color: var(--text-muted); margin: 10px 0 15px 0;">Consulte le détail de nos lignes officielles et prépare tes itinéraires longue distance.</p>
+                <h3>Nos Lignes & Axes</h3>
+                <p style="color: var(--text-muted); margin: 10px 0 15px 0;">Vérifie les DLCs nécessaires et consulte le détail de notre réseau routier officiel.</p>
                 <a href="/lignes" class="btn" style="width: 100%;">Consulter les Lignes du Réseau</a>
             </div>
         </div>
