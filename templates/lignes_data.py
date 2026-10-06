@@ -26,7 +26,7 @@ LIGNES = {
         "arrivee": "Tromsø (Norvège)",
         "km": 5200,
         "description": "L'expédition extrême reliant la péninsule ibérique au cercle polaire arctique."
-    }
+    },
     "ATU-05": {
         "type": "Grand Nord-Sud",
         "depart": "Aberdden (Royaume-Uni)",
