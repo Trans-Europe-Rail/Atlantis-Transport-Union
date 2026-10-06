@@ -2,29 +2,33 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>{{ atu.nom }} — Carte & GPS Requis</title>
+    <title>{{ atu.nom }} - Carte & GPS</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
-    <div class="container">
-        <div class="logo-area" style="display: flex; align-items: center; gap: 14px;">
-            <img src="{{ url_for('static', filename='Designer.png') }}" alt="Atlantis Transport Union" style="height: 48px; width: 48px; border-radius: 8px; object-fit: cover; border: 1px solid var(--border-color); background: #fff;">
-            <div>
-                <h1>{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;">
+            <div class="logo-area" style="display: flex; align-items: center; gap: 14px;">
+                <img src="{{ url_for('static', filename='Designer.png') }}" alt="Logo ATU" style="height: 50px; width: auto; object-fit: contain;">
+                <h1 style="margin: 0; font-size: 1.25rem;">{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
             </div>
+            <nav style="display: flex; gap: 15px;">
+                <a href="/">Accueil</a>
+                <a href="/actifs">Actifs</a>
+                <a href="/lignes">Réseau</a>
+                <a href="/carte">Carte & GPS</a>
+                <a href="/classement">Classement</a>
+                <a href="/factures">Trésorerie</a>
+                <a href="/recrutement">Recrutement</a>
+            </nav>
         </div>
-        <nav>
-            <a href="/">Accueil</a>
-            <a href="/actifs">Actifs</a>
-            <a href="/lignes">Réseau</a>
-            <a href="/carte">Carte & GPS</a>
-            <a href="/classement">Classement</a>
-            <a href="/factures">Trésorerie</a>
-            <a href="/recrutement">Recrutement</a>
-        </nav>
-    </div>
-</header>
+    </header>
+    <main class="container">
+        <h2>Carte GPS en temps réel</h2>
+        <p>Suivi des positions de la flotte.</p>
+    </main>
+</body>
+</html>
 
     <main class="container">
         <section class="hero" style="padding: 40px 20px;">
