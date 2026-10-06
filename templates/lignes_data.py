@@ -21,10 +21,17 @@ LIGNES = {
         "description": "Parcours rapide à travers les plaines d'Europe centrale."
     },
     "ATU-04": {
-        "type": "Grand Nord-Sud",
+        "type": "Grand Sud-Nord",
         "depart": "Lisbonne (Portugal)",
-        "arrivee": "Narvik (Norvège)",
-        "km": 5000,
+        "arrivee": "Tromsø (Norvège)",
+        "km": 5200,
         "description": "L'expédition extrême reliant la péninsule ibérique au cercle polaire arctique."
+    }
+    "ATU-05": {
+        "type": "Grand Nord-Sud",
+        "depart": "Aberdden (Royaume-Uni)",
+        "arrivee": "Rhodes (Grèce)",
+        "km": 4400,
+        "description": "L'expédition extrême reliant les Highlands au Dodécanèse."
     }
 }
