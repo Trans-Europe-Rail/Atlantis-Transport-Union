@@ -28,24 +28,26 @@
             </nav>
         </div>
     </header>
-    <main class="container" style="padding: 20px;">
-        <h2>Gestion de la Flotte & Actifs Trucky</h2>
+    <main class="container" style="padding: 20px; min-height: 70vh;">
+        <section class="hero" style="padding: 20px 0;">
+            <h2>Effectifs Actifs & Flotte</h2>
+            <p>Retrouvez la liste de nos conducteurs actuellement engagés et en mission sur le réseau[cite: 5].</p>
+        </section>
+
         <div class="fleet-section">
             {% if actifs %}
                 <table>
                     <thead>
                         <tr>
-                            <th>Véhicule</th>
-                            <th>Chauffeur</th>
-                            <th>Kilométrage</th>
-                            <th>État</th>
+                            <th>Véhicule / Chauffeur</th>
+                            <th>Kilométrage / Statut</th>
+                            <th>État / Mission</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for camion in actifs %}
                         <tr>
-                            <td>{{ camion.modele }}</td>
-                            <td>{{ camion.chauffeur }}</td>
+                            <td>{{ camion.modele }} ({{ camion.chauffeur }})</td>
                             <td>{{ camion.km }} km</td>
                             <td>{{ camion.etat }}</td>
                         </tr>
@@ -53,48 +55,15 @@
                     </tbody>
                 </table>
             {% else %}
-                <p>Chargement des données de la flotte en direct depuis Trucky...</p>
+                <div class="card" style="text-align: center; padding: 40px;">
+                    <p style="color: var(--text-muted);">Aucune donnée temps réel connectée pour le moment. Rejoignez-nous pour garnir les rangs !</p>
+                    <br>
+                    <a href="/recrutement" class="btn">Devenir conducteur actif</a>
+                </div>
             {% endif %}
         </div>
     </main>
-</body>
-</html>
-
-    <main class="container">
-        <section class="hero" style="padding: 40px 20px;">
-            <h2>Effectifs Actifs</h2>
-            <p>Retrouvez la liste de nos conducteurs actuellement engagés et en mission sur le réseau.</p>
-        </section>
-
-        {% if actifs %}
-        <table>
-            <thead>
-                <tr>
-                    <th>Chauffeur</th>
-                    <th>Statut</th>
-                    <th>Dernière mission</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for chauffeur in actifs %}
-                <tr>
-                    <td><strong>{{ chauffeur.nom }}</strong></td>
-                    <td><span style="color: var(--success);">● En ligne / Actif</span></td>
-                    <td>{{ chauffeur.derniere_mission }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        {% else %}
-        <div class="card" style="text-align: center; padding: 40px;">
-            <p style="color: var(--text-muted);">Aucune donnée temps réel connectée pour le moment. Rejoignez-nous pour garnir les rangs !</p>
-            <br>
-            <a href="/recrutement" class="btn">Devenir conducteur actif</a>
-        </div>
-        {% endif %}
-    </main>
-
-    <footer>
+    <footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; font-size: 0.9rem;">
         <p>&copy; 2026 {{ atu.nom }} — Conçu par {{ atu.auteur }}</p>
     </footer>
 </body>
