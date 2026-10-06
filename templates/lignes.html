@@ -29,16 +29,6 @@
         </div>
     </header>
     <main class="container" style="padding: 20px; min-height: 70vh;">
-        <h2>Réseau de Transport</h2>
-        <p>Consulte les lignes régulières et les trajets ProMods.</p>
-    </main>
-    <footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; font-size: 0.9rem;">
-        <p>&copy; 2026 Atlantis Transport Union (ATU) — Créé et géré par ton pseudo. Tous droits réservés.</p>
-    </footer>
-</body>
-</html>
-
-    <main class="container">
         <section class="hero" style="padding: 40px 20px;">
             <h2>Nos Axes & Prérequis Cartographiques</h2>
             <p>De Madrid jusqu'à Istanbul, et sur notre ligne géante de 5000 km reliant Lisbonne à Narvik, voici les itinéraires de l'ATU et les extensions obligatoires pour rouler avec nous.</p>
@@ -95,14 +85,15 @@
                 <p style="color: var(--text-muted); font-size: 0.95rem; margin: 10px 0;">{{ ligne.description }}</p>
                 <div style="background: rgba(56, 189, 248, 0.05); padding: 10px; border-radius: 6px; border: 1px solid var(--border-color);">
                     <strong style="font-size: 0.85rem; color: var(--text-main);">Distance :</strong> <span style="color: var(--accent);">{{ ligne.km }} km</span><br>
+                    {% if ligne.arrets %}
                     <strong style="font-size: 0.85rem; color: var(--text-main);">Étapes :</strong> <span style="color: var(--text-muted); font-size: 0.9rem;">{{ ", ".join(ligne.arrets) }}</span>
+                    {% endif %}
                 </div>
             </div>
             {% endfor %}
         </div>
     </main>
-
-    <footer>
+    <footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; font-size: 0.9rem;">
         <p>&copy; 2026 {{ atu.nom }} — Conçu par {{ atu.auteur }}</p>
     </footer>
 </body>
