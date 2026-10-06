@@ -25,30 +25,34 @@
 
     <main class="container">
         <section class="hero" style="padding: 40px 20px;">
-            <h2>Cartographie & Réseau Européen</h2>
-            <p>Visualisation globale de notre territoire d'opération, incluant nos axes majeurs et notre ligne record de 5000 km entre Lisbonne et Narvik.</p>
+            <h2>Cartographie & Réseau Officiel SCS</h2>
+            <p>Nos axes de transport reposent exclusivement sur la map SCS officielle (tolérance ProMods acceptée). Aucun multijoueur : la simulation pure en solo s'applique à l'ensemble de nos lignes.</p>
         </section>
 
-        <!-- Carte interactive du jeu -->
-        <div class="card" style="padding: 16px; margin-bottom: 30px; text-align: center;">
-            <h3 style="margin-bottom: 15px; text-align: left;">🗺️ Carte Interactive du Réseau</h3>
-            <div style="position: relative; width: 100%; height: 550px; background-color: #0f172a; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color);">
-                <!-- Intégration d'une visionneuse de carte web ETS2 (style TruckersMP map ou vue d'ensemble) -->
-                <iframe src="https://trucksimgps.com" style="width: 100%; height: 100%; border: none;" title="Carte ETS2"></iframe>
+        <!-- Section Carte du Jeu / Map SCS -->
+        <div class="card" style="padding: 24px; margin-bottom: 30px; text-align: center;">
+            <h3 style="margin-bottom: 15px; text-align: left;">🗺️ Le Territoire de l'ATU (Map SCS)</h3>
+            <div style="background-color: #f1f5f9; border: 1px solid var(--border-color); border-radius: 10px; padding: 40px; text-align: center;">
+                <p style="font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin-bottom: 8px;">Réseau routier officiel SCS Software</p>
+                <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 600px; margin: 0 auto 20px auto;">Nos missions s'étendent de Lisbonne jusqu'à Narvik et couvrent l'intégralité des extensions officielles requises. Le mode solo strict est de rigueur.</p>
+                <span class="btn secondary" style="cursor: default;">Mode Solo / Map SCS Exclusive</span>
             </div>
-            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 10px;">Utilise les contrôles de zoom pour explorer les axes et préparer tes missions en solo ou sous ProMods.</p>
         </div>
 
         <div class="grid">
             <div class="card">
-                <h3>Outils de Navigation</h3>
-                <p style="color: var(--text-muted); margin: 10px 0 15px 0;">Besoin d'un GPS d'appoint pour suivre ta position en direct sur les routes de l'Union ?</p>
-                <a href="https://trucksimgps.com" target="_blank" class="btn" style="width: 100%;">Ouvrir TruckSim GPS en plein écran</a>
+                <h3>Rappel du Règlement Carte</h3>
+                <p style="color: var(--text-muted); margin: 10px 0 15px 0; font-size: 0.95rem;">
+                    • <strong>Map officielle SCS</strong> obligatoire par défaut.<br>
+                    • <strong>ProMods</strong> toléré sous réserve de compatibilité avec les missions.<br>
+                    • <strong>Zéro multijoueur</strong> et mission bouclée impérativement dans la journée.
+                </p>
+                <a href="/lignes" class="btn secondary" style="width: 100%;">Voir les DLCs de cartes requis</a>
             </div>
             <div class="card">
-                <h3>Rappel des Exigences</h3>
-                <p style="color: var(--text-muted); margin: 10px 0 15px 0;">Zéro multijoueur toléré. Toutes les courses s'effectuent en solo strict dans la journée.</p>
-                <a href="/lignes" class="btn secondary" style="width: 100%;">Voir les DLCs requis</a>
+                <h3>Navigation & Suivi</h3>
+                <p style="color: var(--text-muted); margin: 10px 0 15px 0;">Consulte le détail de nos lignes officielles et prépare tes itinéraires longue distance.</p>
+                <a href="/lignes" class="btn" style="width: 100%;">Consulter les Lignes du Réseau</a>
             </div>
         </div>
     </main>
