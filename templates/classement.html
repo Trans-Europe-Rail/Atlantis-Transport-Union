@@ -2,26 +2,33 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>{{ atu.nom }} — Classement</title>
+    <title>{{ atu.nom }} - Classement</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo-area">
-                <h1>{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;">
+            <div class="logo-area" style="display: flex; align-items: center; gap: 14px;">
+                <img src="{{ url_for('static', filename='Designer.png') }}" alt="Logo ATU" style="height: 50px; width: auto; object-fit: contain;">
+                <h1 style="margin: 0; font-size: 1.25rem;">{{ atu.nom }} <span>[{{ atu.tag }}]</span></h1>
             </div>
-            <nav>
+            <nav style="display: flex; gap: 15px;">
                 <a href="/">Accueil</a>
                 <a href="/actifs">Actifs</a>
                 <a href="/lignes">Réseau</a>
                 <a href="/carte">Carte & GPS</a>
-                <a href="/classement" class="active">Classement</a>
+                <a href="/classement">Classement</a>
                 <a href="/factures">Trésorerie</a>
                 <a href="/recrutement">Recrutement</a>
             </nav>
         </div>
     </header>
+    <main class="container">
+        <h2>Classement des Chauffeurs</h2>
+        <p>Performances et missions validées.</p>
+    </main>
+</body>
+</html>
 
     <main class="container">
         <section class="hero" style="padding: 40px 20px;">
