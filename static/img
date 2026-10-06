@@ -1,0 +1,18 @@
+<header>
+    <div class="container">
+        <div class="logo-area">
+            <!-- Utilisation de url_for pour pointer vers static/img/Designer.png -->
+            <img src="{{ url_for('static', filename='img/Designer.png') }}" alt="Logo Atlantis Transport Union">
+            <h1>ATLANTIS TRANSPORT UNION <span>[ATU]</span></h1>
+        </div>
+        <nav>
+            <a href="/">Accueil</a>
+            <a href="/actifs">Actifs</a>
+            <a href="/lignes">Réseau</a>
+            <a href="/carte">Carte & GPS</a>
+            <a href="/classement">Classement</a>
+            <a href="/factures">Trésorerie</a>
+            <a href="/recrutement">Recrutement</a>
+        </nav>
+    </div>
+</header>
