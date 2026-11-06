@@ -132,10 +132,6 @@ def garage():
 def partenariats():
     return render_template('partenariats.html', atu=ATU_INFO)
 
-@app.route('/discord')
-def discord():
-    return render_template('discord.html', atu=ATU_INFO)
-
 @app.errorhandler(404)
 def not_found(e):
     return render_template("404.html", atu=ATU_INFO), 404
