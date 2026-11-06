@@ -26,5 +26,12 @@ LIGNES = {
         "arrivee": "Narvik (Norvège)",
         "km": 5000,
         "description": "L'expédition extrême reliant la péninsule ibérique au cercle polaire arctique."
+    },
+    "ATU-05" : {
+        "type" : "Ouest - Est"
+        "depart" : "Lisbonne (Portugal)",
+        "arrivee" : "Istanbul (Turquie)",
+        "km" : "4100",
+        "description": "L'expédition extrême reliant la péninsule ibérique à l'est de l'europe."
     }
 }
