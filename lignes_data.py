@@ -28,7 +28,7 @@ LIGNES = {
         "description": "L'expédition extrême reliant la péninsule ibérique au cercle polaire arctique."
     },
     "ATU-05" : {
-        "type" : "Ouest - Est"
+        "type" : "Grand Ouest-Est"
         "depart" : "Lisbonne (Portugal)",
         "arrivee" : "Istanbul (Turquie)",
         "km" : "4100",
