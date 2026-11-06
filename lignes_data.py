@@ -33,5 +33,5 @@ LIGNES = {
         "arrivee" : "Istanbul (Turquie)",
         "km" : "4100",
         "description": "L'expédition extrême reliant la péninsule ibérique à l'est de l'europe."
-    },
+    }
 }
