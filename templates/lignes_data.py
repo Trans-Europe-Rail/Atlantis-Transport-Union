@@ -27,11 +27,11 @@ LIGNES = {
         "km": 5200,
         "description": "L'expédition extrême reliant la péninsule ibérique au cercle polaire arctique."
     },
-    "ATU-05": {
-        "type": "Grand Nord-Sud",
-        "depart": "Aberdden (Royaume-Uni)",
-        "arrivee": "Rhodes (Grèce)",
-        "km": 4400,
-        "description": "L'expédition extrême reliant les Highlands au Dodécanèse."
+    "ATU-05" : {
+        "type" : "Ouest - Est"
+        "depart" : "Lisbonne (Portugal)",
+        "arrivee" : "Istanbul (Turquie)",
+        "km" : "4100",
+        "description": "L'expédition extrême reliant la péninsule ibérique à l'est de l'europe."
     }
 }
